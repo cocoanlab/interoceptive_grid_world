@@ -201,8 +201,8 @@ if __name__ == "__main__":
     )
 
     save_params = {
-        "savedir": "/media/nas01/projects/Interoceptive-AI/interoceptive-ai/_analysis/Grid_IAI/save",
-        "imgdir": "/media/nas01/projects/Interoceptive-AI/interoceptive-ai/_analysis/Grid_IAI/img",
+        "savedir": "/Users/sungwoo320/Documents/cocoan_github/interoceptive_grid_world/save",
+        "imgdir": "/Users/sungwoo320/Documents/cocoan_github/interoceptive_grid_world/img",
         "tag": tag,
     }
 
@@ -245,11 +245,8 @@ if __name__ == "__main__":
 
         agentQ.q_table = Q_model
 
-        # agentQ.food_level = int(0.4 * agentQ.max_food)
-        # agentQ.water_level = int(0.7 * agentQ.max_water)
-
-        agentQ.food_level = int(0.4 * agentQ.max_food)
-        agentQ.water_level = int(0.9 * agentQ.max_water)
+        agentQ.food_level = int(0.2 * agentQ.max_food)
+        agentQ.water_level = int(0.7 * agentQ.max_water)
 
         title = "{}, Food Level: {}, Water Level: {}".format(
             trial, agentQ.food_level, agentQ.water_level
@@ -267,11 +264,8 @@ if __name__ == "__main__":
 
             print("Save: {}".format(_save))
 
-        # agentQ.food_level = int(0.7 * agentQ.max_food)
-        # agentQ.water_level = int(0.4 * agentQ.max_water)
-
-        agentQ.food_level = int(0.9 * agentQ.max_food)
-        agentQ.water_level = int(0.4 * agentQ.max_water)
+        agentQ.food_level = int(0.7 * agentQ.max_food)
+        agentQ.water_level = int(0.2 * agentQ.max_water)
 
         title = "{}, Food Level: {}, Water Level: {}".format(
             trial, agentQ.food_level, agentQ.water_level

@@ -14,7 +14,6 @@ def train(
     max_steps_per_episode=1000,
     exploration_episode_ratio=0.1,
 ):
-
     """The train function runs iterations and updates Q-values if desired."""
     reward_per_episode = np.zeros(episodes)  # Initialise performance log
     step_per_episode = np.zeros(episodes)
@@ -230,8 +229,8 @@ if __name__ == "__main__":
     )
 
     save_params = {
-        "savedir": "/media/nas01/projects/Interoceptive-AI/interoceptive-ai/_analysis/Grid_IAI/save",
-        "imgdir": "/media/nas01/projects/Interoceptive-AI/interoceptive-ai/_analysis/Grid_IAI/img",
+        "savedir": "/Users/sungwoo320/Documents/cocoan_github/interoceptive_grid_world/save",
+        "imgdir": "/Users/sungwoo320/Documents/cocoan_github/interoceptive_grid_world/img",
         "tag": tag,
     }
 
@@ -246,5 +245,5 @@ if __name__ == "__main__":
     # )
 
     reward_per_episode, step_per_episode, epsilon_per_episode = train(
-        environment, agentQ, env_params, max_steps_per_episode=100, episodes=500000
+        environment, agentQ, env_params, max_steps_per_episode=100, episodes=5000000
     )
